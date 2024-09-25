@@ -1,0 +1,5 @@
+defaultProject: stock-data-436605
+defaultLocation: US
+defaultDataset: india
+defaultAssertionDataset: india 
+dataformCoreVersion: 3.0.0-beta.4

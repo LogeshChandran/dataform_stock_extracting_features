@@ -1,9 +1,20 @@
-function main(){
-    
+function main() {
+
     let tags = []
-    const get_from_yfinace_function = require('./get_from_yfinace');
-    let input_table_name = "INFY_1d"
-    const { get_from_yfinace } = get_from_yfinace_function(tags,input_table_name)
+    let dependencies = []
+
+    let input_table_name = "INFY_60m"
+    const preprocessing_stop_function = require('./preprocessing_stop');
+    const sma_function = require('./sma');
+
+
+    const {
+        preprocessing_stop
+    } = preprocessing_stop_function(tags, dependencies, input_table_name);
+    
+    const {
+        sma
+    } = sma_function(tags, preprocessing_stop, preprocessing_stop);
 
 }
 

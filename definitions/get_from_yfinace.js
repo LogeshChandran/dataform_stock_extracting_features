@@ -20,7 +20,6 @@ module.exports = (tags,input_table_name) => {
                 round(avg(Close) OVER (ORDER BY Datetime ROWS BETWEEN 255 PRECEDING AND CURRENT ROW),2) AS sma_12mo,
             FROM
                 \`${constants.project}.${constants.dtset}.${input_table_name}\`
-            order by Datetime
             `;
             return query;
         });

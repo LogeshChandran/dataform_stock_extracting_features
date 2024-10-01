@@ -1,4 +1,4 @@
-module.exports = (tags, dependencies, input_table_name,preprocessing_stop) => {
+module.exports = (tags, dependencies, stock_name,input_table_name,preprocessing_stop) => {
     const sma_table = constants.prefix+input_table_name + '_high_low'+constants.suffix
     const table_name_function = publish(sma_table, {
         type: "table",

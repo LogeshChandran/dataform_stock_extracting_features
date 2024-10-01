@@ -1,4 +1,4 @@
-module.exports = (tags, dependencies, input_table_name, sma_table,column="Close") => {
+module.exports = (tags, dependencies, stock_name,input_table_name, sma_table,column="Close") => {
     const lag_table =  constants.prefix+input_table_name + '_LAG'+constants.suffix
     const table_name_function = publish(lag_table, {
         type: "table",
